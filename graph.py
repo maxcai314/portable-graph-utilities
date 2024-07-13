@@ -1,3 +1,13 @@
+"""@package docstring
+portable-graph-utilities
+a lightweight and extensible object-oriented graph model for python
+
+https://github.com/maxcai314/portable-graph-utilities
+Max Cai
+maxster@xz.ax
+"""
+
+
 class Node:
     def __init__(self):
         self._edges = set()
