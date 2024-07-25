@@ -15,6 +15,9 @@ class Node:
     def edges(self):
         return iter(self._edges)
 
+    def num_neighbors(self):
+        return len(self._edges)
+
     def _register_edge(self, edge):
         self._edges.add(edge)
 
