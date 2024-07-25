@@ -47,6 +47,12 @@ class Graph:
         self._nodes = set()
         self._edges = {}
 
+    def clear(self):
+        for node in self._nodes:
+            node._edges.clear()
+        self._nodes.clear()
+        self._edges.clear()
+
     def add_node(self, node: Node):
         self._nodes.add(node)
 
