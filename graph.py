@@ -60,6 +60,7 @@ class Graph:
         for edge in node.edges():
             other_node = edge.source if edge.source != node else edge.target
             other_node._deregister_edge(edge)
+            self._edges.remove(edge)
         node._edges.clear()
         self._nodes.remove(node)
 
