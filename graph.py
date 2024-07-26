@@ -58,7 +58,9 @@ class Graph:
 
     def remove_node(self, node: Node):
         for edge in node.edges():
-            self.remove_edge(edge)
+            other_node = edge.source if edge.source != node else edge.target
+            other_node._deregister_edge(edge)
+        node._edges.clear()
         self._nodes.remove(node)
 
     def has_node(self, node: Node):
